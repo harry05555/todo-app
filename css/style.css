@@ -1,0 +1,436 @@
+:root {
+    /* Primary */
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%) 70%);
+    /* Light Theme */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+    /* Dark Theme */
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+@font-face {
+    font-family: 'JosefinSans-Bold';
+    src: url('../font/JosefinSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'JosefinSans-Regular';
+    src: url('../font/JosefinSans-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body);
+    font-size: 18px;
+    font-family: 'JosefinSans-Regular';
+}
+
+.container {
+    margin: auto;
+    max-width: 330px;
+}
+
+.bg-img-light {
+    max-width: 375px;
+    margin: auto;
+    background-image: url("../images/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+}
+
+.bg-img-dark {
+    max-width: 375px;
+    margin: auto;
+    background-image: url("../images/bg-mobile-dark.jpg");
+    background-repeat: no-repeat;
+}
+
+.icon-moon {
+    background: url("../images/icon-moon.svg") no-repeat;
+    height: 26px;
+    width: 26px;
+}
+
+.icon-moon:hover {
+    cursor: pointer;
+}
+
+.icon-sun {
+    background: url("../images/icon-sun.svg") no-repeat;
+    height: 26px;
+    width: 26px;
+}
+
+.icon-sun:hover {
+    cursor: pointer;
+}
+
+div h1 {
+    color: white;
+    max-height: 33px;
+    letter-spacing: 14px;
+    font-size: 22px;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 0 36px 0;
+}
+
+.new-todo {
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--first-todo);
+    height: 49px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.input-center {
+    width: 288px;
+    margin: auto;
+    display: flex;
+}
+
+.circle, .add-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    border-color: var(--circle);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.add-circle:hover {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    border: none;
+    background-image: var(--Check-Background);
+    border-color: var(--first-todo);
+}
+
+.circle:hover {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border: solid 1px transparent;
+    border-radius: 30px;
+    background-image: linear-gradient(var(--first-todo), var(--first-todo)),
+        linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%) 70%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.new-text {
+    font-family: 'JosefinSans-Regular';
+    margin-left: 14px;
+    background-color: transparent;
+    border: none;
+    color: var(--todo-text);
+    font-size: 15px;
+    outline: none;
+
+}
+
+.new-text::placeholder {
+    color: var(--new-text);
+}
+
+.new-text:focus {
+    color: var(--todo-text);
+
+}
+
+.add-text-new {
+    color: var(--todo-text);
+}
+
+.todo-listen:first-child {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    background-color: var(--first-todo);
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.list-center {
+    width: 288px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.list-center {
+    cursor: pointer;
+}
+
+.circle-full {
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background-image: var(--Check-Background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-full:hover {
+    cursor: pointer;
+}
+
+.cross-text {
+    font-size: 13px;
+    margin-left: 14px;
+    color: var(--cross-text);
+    text-decoration: line-through 3px;
+}
+
+.check {
+    background: url("../images/icon-check.svg") no-repeat;
+    height: 9px;
+    width: 11px;
+}
+
+.cross-icon {
+    background: url("../images/icon-cross.svg") no-repeat;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    right: 0;
+}
+
+.cross-icon:hover {
+    cursor: pointer;
+}
+
+.todo-text {
+    font-size: 13px;
+    margin-left: 14px;
+    color: var(--todo-text);
+    display: flex;
+    align-items: center;
+}
+
+.text:hover {
+    cursor: text;
+}
+
+.todo-listen, .listen-counter {
+    width: 100%;
+    background-color: var(--todo-listen);
+    border-top: 1px solid;
+    border-top-color: var(--todo-listen-listen-counter);
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.todo-listen:hover {
+    cursor: move;
+}
+
+.todo-footer {
+    width: 100%;
+    background-color: var(--todo-footer);
+    border-top: 1px solid;
+    border-top-color: var(--todo-listen-listen-counter);
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 6px 6px;
+}
+
+.information {
+    width: 100%;
+    color: var(--information);
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#counter-mobile {
+    margin-right: 5px;
+}
+
+#clear-completed-mobile:hover {
+    color: var(--Bright-Blue);
+    cursor: pointer;
+}
+
+.center {
+    width: 100%;
+    color: var(--Dark-Grayish-Blue);
+    display: flex;
+    font-family: 'JosefinSans-Bold';
+    font-size: 14px;
+    justify-content: space-evenly;
+}
+
+.center div:hover {
+    color: var(--Bright-Blue);
+    cursor: pointer;
+}
+
+.bottom-information {
+    margin-top: 48px !important;
+    width: 288px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.mobile-off {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    .bg-img-light {
+        max-width: 1440px;
+        margin: auto;
+        background-image: url("../images/bg-desktop-light.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .bg-img-dark {
+        max-width: 1440px;
+        margin: auto;
+        background-image: url("../images/bg-desktop-dark.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 540px;
+    }
+
+    .headline {
+        padding: 76px 0 50px 0;
+    }
+
+    div h1 {
+        font-size: 33px;
+    }
+
+    .new-todo {
+        height: 67px;
+        margin-bottom: 24px;
+    }
+
+    .input-center, .list-center {
+        width: 496px;
+    }
+
+    .circle, .add-circle {
+        width: 30px;
+        height: 30px;
+        border-width: 2px;
+    }
+
+    .add-circle:hover {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: none;
+        background-image: var(--Check-Background);
+        border-color: var(--first-todo);
+    }
+
+    .circle:hover {
+        width: 30px;
+        height: 30px;
+        border: solid 2px transparent;
+        border-radius: 30px;
+        background-image: linear-gradient(var(--first-todo), var(--first-todo)),
+            linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%) 70%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+
+    .new-text, .todo-text, .cross-text {
+        margin-left: 22px;
+        font-size: 20px;
+    }
+
+    .todo-listen, .todo-listen:first-child {
+        height: 67px;
+    }
+
+    .circle-full {
+        width: 30px;
+        height: 30px;
+    }
+
+    .check {
+        background-size: cover;
+        height: 12px;
+        width: 14px;
+    }
+
+    .cross-text {
+        font-size: 20px;
+        margin-left: 22px;
+        text-decoration: line-through 4px;
+    }
+
+    .desktop-off {
+        display: none;
+    }
+
+    .optionen-center {
+        width: 496px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        color: var(--Light-Grayish-Blue);
+    }
+
+    .desktop-option {
+        width: 166px;
+        color: var(--Dark-Grayish-Blue);
+        font-family: 'JosefinSans-Bold';
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-option div:hover {
+        color: var(--Bright-Blue);
+        cursor: pointer;
+    }
+
+    #clear-completed-desktop:hover {
+        color: var(--Bright-Blue);
+        cursor: pointer;
+    }
+
+    .mobile-off {
+        display: flex;
+    }
+}
+
+.hidden {
+    display: none;
+}

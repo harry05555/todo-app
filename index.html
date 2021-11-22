@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <title>Todo app</title>
+</head>
+
+<body>
+  <div id="bg-img" class="bg-img-light">
+    <div class="container">
+      <div class="headline">
+        <h1>TODO</h1>
+        <span id="themeSwitcher" class="icon-moon" onclick="themeSwitcher()"></span>
+      </div>
+
+      <div class="new-todo">
+        <div class="input-center">
+          <div id="add-circle" class="add-circle" onclick="addNewText()"></div>
+          <input id="add-text" class="new-text" placeholder="Create a new todo..." maxlength="38">
+        </div>
+      </div>
+      <div id="cotainer-todos" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      <div class="desktop-off">
+        <div class="listen-counter">
+          <div class="list-center">
+            <div class="information">
+              <div><span id="mobile">0 </span>items left</div>
+              <div id="clear-completed-mobile" onclick="clearCompleted()">Clear Completed</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="todo-footer">
+          <div class="list-center">
+            <div class="center">
+              <div onclick="showAll()">All</div>
+              <div onclick="showActive()">Active</div>
+              <div onclick="showCompleted()">Completed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="todo-footer mobile-off">
+        <div class="optionen-center">
+          <div><span id="counter-desktop">0 </span>items left</div>
+          <div class="desktop-option">
+            <div onclick="showAll()">All</div>
+            <div onclick="showActive()">Active</div>
+            <div onclick="showCompleted()">Completed</div>
+          </div>
+          <div id="clear-completed-desktop" onclick="clearCompleted()">Clear Completed</div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="bottom-information">Drag and drop to reorder list</div>
+
+  </div>
+  
+</body>
+<script src="js/themeChanger.js"></script>
+<script src="js/appLogic.js"></script>
+</html>

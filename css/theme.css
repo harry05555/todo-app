@@ -1,0 +1,25 @@
+  .theme-light {
+      --body:hsl(236, 33%, 92%);
+      --first-todo:hsl(0, 0%, 98%);
+      --todo-listen:hsl(0, 0%, 98%);
+      --todo-footer:hsl(0, 0%, 98%);
+      --cross-text:hsl(236, 33%, 92%);
+      --circle:hsl(236, 33%, 92%);
+      --new-text:hsl(236, 9%, 61%);
+      --todo-text:hsl(235, 19%, 35%);
+      --todo-listen-listen-counter:hsl(233, 11%, 84%);
+      --information:hsl(236, 9%, 61%);
+  }
+
+  .theme-dark {
+    --body:hsl(235, 21%, 11%);
+    --first-todo:hsl(235, 24%, 19%);
+    --todo-listen:hsl(235, 24%, 19%);
+    --todo-footer:hsl(235, 24%, 19%);
+    --cross-text:hsl(237, 14%, 26%);
+    --circle:hsl(234, 11%, 52%);
+    --new-text:hsl(234, 11%, 52%);
+    --todo-text: hsl(234, 39%, 85%);
+    --todo-listen-listen-counter:hsl(237, 14%, 26%);
+    --information:hsl(234, 11%, 52%);
+  }
